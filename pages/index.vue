@@ -8,7 +8,7 @@
       flex-dir="column"
       justify-content="center"
     >
-      <CHeading text-align="center" mb="4"> ⚡️ Hello koya </CHeading>
+      <CHeading text-align="center" mb="4"> ⚡️ Hello </CHeading>
       <CFlex justify="center" direction="column" align="center">
         <CBox mb="3">
           <CIconButton
@@ -76,6 +76,8 @@
           </CModalContent>
         </CModal>
       </CFlex>
+
+      <v-btn to="/fish/taman">田萬先輩</v-btn>
     </CBox>
   </div>
 </template>
