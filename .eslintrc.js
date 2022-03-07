@@ -1,4 +1,4 @@
-/*module.exports = {
+module.exports = {
   root: true,
   env: {
     browser: true,
@@ -12,4 +12,4 @@
   plugins: [],
   // add your custom rules here
   rules: {},
-}*/
+}
