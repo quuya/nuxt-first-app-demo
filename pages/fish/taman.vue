@@ -49,27 +49,50 @@
     <v-container
     class="py-8 px-6"
     fkuid>
-    <v-row>
-      <v-col>
-        <v-card>
-        <p>1</p>
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card>
-        <p>2</p>
-        </v-card>
-      </v-col>
-      <v-col>
-        <v-card>
-        <p>3</p>
-        </v-card>
-      </v-col>
-    </v-row>
-      <v-btn  color='primary' to='/fish/shark'>
-        サメ
-      </v-btn>
+      <v-row>
+        <v-col>
+          <v-card>
+          <p>1</p>
+          </v-card>
+        </v-col>
+        <v-col>
+          <v-card>
+          <p>2</p>
+          </v-card>
+        </v-col>
+        <v-col>
+          <v-card>
+          <p>3</p>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-btn  color='primary' to='/fish/shark'>
+          サメ
+        </v-btn>
+      </v-row>
+      <v-row>
+        <ul>
+          <li v-for="todo in todos" :key="todo.key">
+            {{todo.text}}
+          </li>
+        </ul>
+      </v-row>
+      <v-row>
+        <ul  v-for="todo in todos" :key="todo.key" class="todocontent">
+          <v-card width="500" height="50" >
+            <v-card-text >
+              <a href="./todopra">
+              {{todo.text}}
+              </a>
+            </v-card-text>
+          </v-card>         
+        </ul>
+      </v-row>
+      <!--addtodo-->
+      <v-row>
 
+      </v-row>
     
     </v-container>
   </v-main>
@@ -88,12 +111,21 @@
         ['mdi-delete', 'Trash'],
         ['mdi-alert-octagon', 'Spam'],
       ],
+      todos:[
+        {text:'vue'},
+        {text:'Nuxt'},
+        {text:'vuetify'},
+        {text:'todo'}
+      ]
     }),
   }
 </script>
 <style scoped>
 .col{
   text-align:center ;
+}
+.todocontent{
+  padding :10px;
 }
 
 
