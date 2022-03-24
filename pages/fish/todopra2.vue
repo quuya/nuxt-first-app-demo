@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-container text-center wrap >
-            <v-card mx-auto>
+            <v-card mx-auto >
                 <v-toolbar color="cyan" dark>
                     <v-toolbar-title>
                         TodoList
