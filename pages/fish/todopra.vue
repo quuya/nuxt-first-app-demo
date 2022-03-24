@@ -20,27 +20,25 @@
     
 
             <v-list v-for="item in items" :key="item.id" cols="12">
-                <v-list-item-group>
-                    <v-list-item>
-                        <v-list-item-action>
-                            <v-checkbox :input-value=item.done @click="done(item.id)">
-                            </v-checkbox>
-                        </v-list-item-action>
-                        
-                        <v-list-item-content>
-                            <v-list-item-title>
-                                {{item.task}}
-                            </v-list-item-title>
-                        </v-list-item-content>
-                        <v-list-item-action>
-                            <v-btn @click='deleteTask(item.id)' icon>
-                                <v-icon>
-                                    mdi-backspace
-                                </v-icon>
-                            </v-btn>
-                        </v-list-item-action>
-                    </v-list-item>
-                </v-list-item-group>
+                <v-list-item>
+                    <v-list-item-action>
+                        <v-checkbox :input-value=item.done @click="done(item.id)">
+                        </v-checkbox>
+                    </v-list-item-action>
+                    
+                    <v-list-item-content>
+                        <v-list-item-title>
+                            {{item.task}}
+                        </v-list-item-title>
+                    </v-list-item-content>
+                    <v-list-item-action>
+                        <v-btn @click='deleteTask(item.id)' icon>
+                            <v-icon>
+                                mdi-backspace
+                            </v-icon>
+                        </v-btn>
+                    </v-list-item-action>
+                </v-list-item>
             </v-list>
 
             <v-col cols="12" class="d-flex">
@@ -92,6 +90,7 @@ export default{
         addTask(todo){
             let id = Date.now().toString()
             this.items.push({id:id,task:todo,done:false})
+            todo=""
         }
     }
 }    

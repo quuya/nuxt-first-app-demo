@@ -78,6 +78,7 @@
       </CFlex>
 
       <v-btn to="/fish/taman">田萬先輩</v-btn>
+      <v-btn to="/fish/todopra2">todopra2</v-btn>
     </CBox>
   </div>
 </template>
